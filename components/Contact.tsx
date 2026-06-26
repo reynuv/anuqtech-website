@@ -32,13 +32,13 @@ export default function Contact() {
   };
 
   const inputClass =
-    "w-full px-4 py-3 rounded-xl border border-zinc-200 bg-white text-zinc-900 placeholder-zinc-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#6C3AE8]/30 focus:border-[#6C3AE8] transition-all";
+    "w-full px-4 py-3 rounded-xl border border-zinc-200 bg-white text-zinc-900 placeholder-zinc-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#1D4ED8]/30 focus:border-[#1D4ED8] transition-all";
 
   return (
     <section id="contact" className="py-24 bg-white border-t border-zinc-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#6C3AE8]/10 border border-[#6C3AE8]/20 text-[#6C3AE8] text-sm font-medium mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#1D4ED8]/10 border border-[#1D4ED8]/20 text-[#1D4ED8] text-sm font-medium mb-4">
             <Mail size={14} />
             Get in Touch
           </div>
@@ -57,22 +57,22 @@ export default function Contact() {
           <div className="lg:col-span-2 space-y-6">
             <div className="p-6 rounded-2xl border border-zinc-100 bg-white space-y-5">
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#6C3AE8]/10 flex items-center justify-center flex-shrink-0">
-                  <Mail size={18} className="text-[#6C3AE8]" />
+                <div className="w-10 h-10 rounded-xl bg-[#1D4ED8]/10 flex items-center justify-center flex-shrink-0">
+                  <Mail size={18} className="text-[#1D4ED8]" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-zinc-900">Email</div>
                   <a
                     href="mailto:hello@anuqtech.com"
-                    className="text-sm text-zinc-500 hover:text-[#6C3AE8] transition-colors"
+                    className="text-sm text-zinc-500 hover:text-[#1D4ED8] transition-colors"
                   >
                     hello@anuqtech.com
                   </a>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="w-10 h-10 rounded-xl bg-[#6C3AE8]/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={18} className="text-[#6C3AE8]" />
+                <div className="w-10 h-10 rounded-xl bg-[#1D4ED8]/10 flex items-center justify-center flex-shrink-0">
+                  <MapPin size={18} className="text-[#1D4ED8]" />
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-zinc-900">Location</div>
@@ -96,7 +96,7 @@ export default function Contact() {
                       href={s.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 px-4 py-2 rounded-xl border border-zinc-200 text-zinc-600 text-sm font-medium hover:border-[#6C3AE8] hover:text-[#6C3AE8] transition-all"
+                      className="flex items-center gap-2 px-4 py-2 rounded-xl border border-zinc-200 text-zinc-600 text-sm font-medium hover:border-[#1D4ED8] hover:text-[#1D4ED8] transition-all"
                     >
                       <Icon size={16} />
                       {s.label}
@@ -107,8 +107,8 @@ export default function Contact() {
             </div>
 
             {/* Response time */}
-            <div className="p-4 rounded-2xl bg-[#6C3AE8]/5 border border-[#6C3AE8]/15">
-              <div className="flex items-center gap-2 text-sm text-[#6C3AE8] font-medium">
+            <div className="p-4 rounded-2xl bg-[#1D4ED8]/5 border border-[#1D4ED8]/15">
+              <div className="flex items-center gap-2 text-sm text-[#1D4ED8] font-medium">
                 <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
                 Usually responds within 24 hours
               </div>
@@ -127,7 +127,7 @@ export default function Contact() {
                   </p>
                   <button
                     onClick={() => setStatus("idle")}
-                    className="mt-2 text-sm font-medium text-[#6C3AE8] hover:underline"
+                    className="mt-2 text-sm font-medium text-[#1D4ED8] hover:underline"
                   >
                     Send another message
                   </button>
@@ -209,7 +209,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#6C3AE8] text-white font-semibold hover:bg-[#4F1FD4] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-lg shadow-[#6C3AE8]/20"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-[#1D4ED8] text-white font-semibold hover:bg-[#1E40AF] transition-all disabled:opacity-60 disabled:cursor-not-allowed shadow-lg shadow-[#1D4ED8]/20"
                   >
                     {status === "sending" ? (
                       <>
