@@ -35,7 +35,7 @@ export default function Contact() {
     "w-full px-4 py-3 rounded-xl border border-zinc-200 bg-white text-zinc-900 placeholder-zinc-400 text-sm focus:outline-none focus:ring-2 focus:ring-[#6C3AE8]/30 focus:border-[#6C3AE8] transition-all";
 
   return (
-    <section id="contact" className="py-24 bg-zinc-50">
+    <section id="contact" className="py-24 bg-white border-t border-zinc-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#6C3AE8]/10 border border-[#6C3AE8]/20 text-[#6C3AE8] text-sm font-medium mb-4">

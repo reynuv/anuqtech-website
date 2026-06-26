@@ -1,8 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Services from "@/components/Services";
-import Products from "@/components/Products";
-import About from "@/components/About";
+import Manifesto from "@/components/Manifesto";
+import ProblemBuckets from "@/components/ProblemBuckets";
+import HowWeSimplify from "@/components/HowWeSimplify";
+import Proof from "@/components/Proof";
+import Capabilities from "@/components/Capabilities";
+import FinalCTA from "@/components/FinalCTA";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -12,9 +15,12 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
-        <Products />
-        <About />
+        <Manifesto />
+        <ProblemBuckets />
+        <HowWeSimplify />
+        <Proof />
+        <Capabilities />
+        <FinalCTA />
         <Contact />
       </main>
       <Footer />
