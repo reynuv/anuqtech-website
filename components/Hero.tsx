@@ -18,38 +18,36 @@ export default function Hero() {
       {/* Glow — centered on logo */}
       <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#1D4ED8]/15 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="relative flex-1 flex flex-col justify-center max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-28 pb-16">
+      <div className="relative flex-1 flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 pb-16">
 
-        {/* Logo — prominent brand anchor */}
-        <div className="flex flex-col items-start gap-4 mb-14">
+        {/* Logo — centrepiece identity */}
+        <div className="relative mb-8">
+          <div className="absolute inset-0 scale-150 bg-[#1D4ED8]/20 blur-[80px] rounded-full pointer-events-none" />
           <Image
             src="/logo-icon.webp"
             alt="ANU-Q Technologies"
-            width={120}
-            height={120}
-            className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_40px_rgba(96,165,250,0.35)]"
+            width={180}
+            height={180}
+            className="relative w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52 object-contain drop-shadow-[0_0_60px_rgba(96,165,250,0.5)]"
             priority
           />
-          <div>
-            <p className="text-white font-black text-2xl sm:text-3xl tracking-widest uppercase leading-none">ANU-Q</p>
-            <p className="text-zinc-500 text-xs tracking-[0.4em] uppercase mt-1">Technologies</p>
-          </div>
         </div>
 
-        <h1 className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.9] tracking-tight text-white max-w-5xl mb-8">
+        <p className="text-white font-black text-3xl sm:text-4xl tracking-[0.2em] uppercase mb-1">ANU-Q</p>
+        <p className="text-zinc-500 text-xs tracking-[0.5em] uppercase mb-16">Technologies</p>
+
+        <h1 className="text-[clamp(2.2rem,6vw,5.5rem)] font-black leading-[0.95] tracking-tight text-white mb-6">
           One team for the problems
           <br />
-          <span className="text-[#60A5FA]">
-            specialists split apart.
-          </span>
+          <span className="text-[#60A5FA]">specialists split apart.</span>
         </h1>
 
-        <p className="text-xl text-zinc-400 max-w-xl leading-relaxed mb-10">
+        <p className="text-lg text-zinc-400 max-w-lg leading-relaxed mb-10">
           Complex, fragmented problems. No gap between specialists. One team,
           one solution, fewer handoffs.
         </p>
 
-        <div className="flex flex-wrap gap-4">
+        <div className="flex flex-wrap justify-center gap-4">
           <a
             href="#contact"
             className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D4ED8] text-white font-semibold rounded-xl hover:bg-[#1E40AF] transition-all text-lg shadow-lg shadow-[#1D4ED8]/30"
