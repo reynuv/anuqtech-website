@@ -83,7 +83,7 @@ export default function Footer() {
 
         <div className="border-t border-zinc-800 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-zinc-500">
-            © {new Date().getFullYear()} ANU-Q Technologies OPC Pvt Ltd. All rights reserved.
+            © {new Date().getFullYear()} ANU-Q TECHNOLOGIES (OPC) PRIVATE LIMITED · CIN: U62099MH2026OPC472555 · All rights reserved.
           </p>
           <p className="text-xs text-zinc-600">Crafted in India · Powered by Claude AI</p>
         </div>
