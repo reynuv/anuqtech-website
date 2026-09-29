@@ -1,6 +1,7 @@
 "use client";
 
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -14,18 +15,28 @@ export default function Hero() {
           backgroundSize: "60px 60px",
         }}
       />
-      {/* Glow */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-[#1D4ED8]/20 blur-[120px] rounded-full pointer-events-none" />
+      {/* Glow — centered on logo */}
+      <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#1D4ED8]/15 blur-[140px] rounded-full pointer-events-none" />
 
-      <div className="relative flex-1 flex flex-col justify-center max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-32 pb-16">
-        <div className="flex items-center gap-3 mb-10">
-          <div className="h-px w-12 bg-[#3B82F6]" />
-          <span className="text-[#3B82F6] text-sm font-mono tracking-widest uppercase">
-            ANU-Q Technologies
-          </span>
+      <div className="relative flex-1 flex flex-col justify-center max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 pt-28 pb-16">
+
+        {/* Logo — prominent brand anchor */}
+        <div className="flex flex-col items-start gap-4 mb-14">
+          <Image
+            src="/logo-icon.webp"
+            alt="ANU-Q Technologies"
+            width={120}
+            height={120}
+            className="w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 object-contain drop-shadow-[0_0_40px_rgba(96,165,250,0.35)]"
+            priority
+          />
+          <div>
+            <p className="text-white font-black text-2xl sm:text-3xl tracking-widest uppercase leading-none">ANU-Q</p>
+            <p className="text-zinc-500 text-xs tracking-[0.4em] uppercase mt-1">Technologies</p>
+          </div>
         </div>
 
-        <h1 className="text-[clamp(3rem,8vw,7rem)] font-black leading-[0.9] tracking-tight text-white max-w-5xl mb-8">
+        <h1 className="text-[clamp(2.5rem,7vw,6.5rem)] font-black leading-[0.9] tracking-tight text-white max-w-5xl mb-8">
           One team for the problems
           <br />
           <span className="text-[#60A5FA]">
