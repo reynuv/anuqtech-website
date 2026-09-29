@@ -32,24 +32,18 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="flex items-center justify-between h-16">
-          {/* Logo — icon on mobile, full wordmark on desktop */}
-          <a href="#" className="flex items-center">
+          <a href="#" className="flex items-center gap-3">
             <Image
               src="/logo-icon.webp"
               alt="ANU-Q Technologies"
               width={40}
               height={40}
-              className="h-10 w-auto object-contain sm:hidden"
+              className="h-10 w-10 object-contain"
               priority
             />
-            <Image
-              src="/logo.webp"
-              alt="ANU-Q Technologies"
-              width={220}
-              height={56}
-              className="hidden sm:block h-10 w-auto object-contain"
-              priority
-            />
+            <span className="hidden sm:block text-white font-bold text-sm tracking-widest uppercase">
+              ANU-Q <span className="text-zinc-400 font-normal">Technologies</span>
+            </span>
           </a>
 
           {/* Desktop nav */}

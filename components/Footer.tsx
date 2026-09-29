@@ -28,18 +28,15 @@ export default function Footer() {
             <div className="flex items-center gap-3">
               <Image
                 src="/logo-icon.webp"
-                alt="ANU-Q icon"
-                width={40}
-                height={40}
-                className="h-10 w-10 object-contain"
-              />
-              <Image
-                src="/logo.webp"
                 alt="ANU-Q Technologies"
-                width={180}
-                height={46}
-                className="h-9 w-auto object-contain brightness-0 invert opacity-90"
+                width={44}
+                height={44}
+                className="h-11 w-11 object-contain"
               />
+              <div className="flex flex-col leading-tight">
+                <span className="text-white font-bold text-sm tracking-widest uppercase">ANU-Q</span>
+                <span className="text-zinc-500 text-xs tracking-widest uppercase">Technologies</span>
+              </div>
             </div>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
               AI products and automation for complex, fragmented problems. Registered OPC, India.
