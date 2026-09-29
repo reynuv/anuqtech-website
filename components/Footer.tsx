@@ -25,13 +25,22 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
         <div className="py-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-5">
-            <Image
-              src="/logo.webp"
-              alt="ANU-Q Technologies"
-              width={200}
-              height={52}
-              className="h-10 w-auto object-contain brightness-0 invert opacity-90"
-            />
+            <div className="flex items-center gap-3">
+              <Image
+                src="/logo-icon.webp"
+                alt="ANU-Q icon"
+                width={40}
+                height={40}
+                className="h-10 w-10 object-contain"
+              />
+              <Image
+                src="/logo.webp"
+                alt="ANU-Q Technologies"
+                width={180}
+                height={46}
+                className="h-9 w-auto object-contain brightness-0 invert opacity-90"
+              />
+            </div>
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
               AI products and automation for complex, fragmented problems. Registered OPC, India.
             </p>
