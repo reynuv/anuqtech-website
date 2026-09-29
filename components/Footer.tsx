@@ -26,10 +26,10 @@ export default function Footer() {
         <div className="py-16 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
           <div className="lg:col-span-2 space-y-5">
             <Image
-              src="/logo.png"
-              alt="Anu-Q Technologies"
-              width={160}
-              height={44}
+              src="/logo.webp"
+              alt="ANU-Q Technologies"
+              width={200}
+              height={52}
               className="h-10 w-auto object-contain brightness-0 invert opacity-90"
             />
             <p className="text-sm text-zinc-400 leading-relaxed max-w-xs">
@@ -74,7 +74,7 @@ export default function Footer() {
 
         <div className="border-t border-zinc-800 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-zinc-500">
-            © {new Date().getFullYear()} AnuQ Technologies OPC Pvt Ltd. All rights reserved.
+            © {new Date().getFullYear()} ANU-Q Technologies OPC Pvt Ltd. All rights reserved.
           </p>
           <p className="text-xs text-zinc-600">Crafted in India · Powered by Claude AI</p>
         </div>

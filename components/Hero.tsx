@@ -21,7 +21,7 @@ export default function Hero() {
         <div className="flex items-center gap-3 mb-10">
           <div className="h-px w-12 bg-[#3B82F6]" />
           <span className="text-[#3B82F6] text-sm font-mono tracking-widest uppercase">
-            AnuQ Technologies
+            ANU-Q Technologies
           </span>
         </div>
 
