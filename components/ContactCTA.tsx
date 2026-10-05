@@ -24,12 +24,17 @@ export default function ContactCTA() {
   }
 
   return (
-    <section id="contact" className="relative bg-[#0F172A] py-24 overflow-hidden">
-      {/* Wave gradient overlay */}
+    <section id="contact" className="relative bg-gradient-to-br from-[#1E1B4B] via-[#0F172A] to-[#0C1A35] py-24 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-0 right-0 h-72 bg-gradient-to-t from-[#1E1B4B]/60 to-transparent" />
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#4F46E5]/10 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#7C3AED]/10 blur-3xl" />
+        {/* Indigo glow top-right */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-[#4F46E5]/20 blur-[120px]" />
+        {/* Purple glow bottom-left */}
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] rounded-full bg-[#7C3AED]/15 blur-[100px]" />
+        {/* Subtle dot grid */}
+        <div className="absolute inset-0 opacity-20" style={{
+          backgroundImage: "radial-gradient(circle, rgba(79,70,229,0.4) 1px, transparent 1px)",
+          backgroundSize: "36px 36px",
+        }} />
       </div>
 
       <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
