@@ -4,100 +4,38 @@ import { ArrowRight, Play, FileText, Link2, Clock, Lightbulb } from "lucide-reac
 import Image from "next/image";
 
 const problems = [
-  { icon: FileText,  label: "Manual work",        iconBg: "bg-rose-100 text-rose-500",       line: "#F43F5E" },
-  { icon: Link2,     label: "Disconnected tools",  iconBg: "bg-amber-100 text-amber-500",     line: "#F59E0B" },
-  { icon: Clock,     label: "Slow decisions",      iconBg: "bg-sky-100 text-sky-500",         line: "#0EA5E9" },
-  { icon: Lightbulb, label: "New ideas",           iconBg: "bg-emerald-100 text-emerald-600", line: "#10B981" },
-];
-
-const serviceTags = [
-  { label: "Ideas",             href: "/ideas" },
-  { label: "Automation",        href: "/automation" },
-  { label: "AI",                href: "/ai" },
-  { label: "Digital Solutions", href: "/digital-solutions" },
+  { icon: FileText,  label: "Manual work",       iconColor: "text-rose-400",    iconBg: "bg-rose-50",    lineColor: "#F43F5E" },
+  { icon: Link2,     label: "Disconnected tools", iconColor: "text-blue-400",    iconBg: "bg-blue-50",    lineColor: "#3B82F6" },
+  { icon: Clock,     label: "Slow decisions",     iconColor: "text-amber-400",   iconBg: "bg-amber-50",   lineColor: "#F59E0B" },
+  { icon: Lightbulb, label: "New ideas",          iconColor: "text-violet-400",  iconBg: "bg-violet-50",  lineColor: "#8B5CF6" },
 ];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center bg-white overflow-hidden pt-16">
+    <section className="relative min-h-screen flex flex-col justify-center bg-gradient-to-b from-[#F5F7FF] via-[#EEF1FF] to-[#E8EDFF] overflow-hidden pt-16">
 
-      {/* ── Pastel wave background — right half only ── */}
-      <div className="absolute inset-y-0 right-0 w-[58%] pointer-events-none overflow-hidden">
-        <svg
-          viewBox="0 0 600 800"
-          preserveAspectRatio="xMinYMid slice"
-          className="absolute inset-0 w-full h-full"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <linearGradient id="sky" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#BAE6FD" stopOpacity="0.55" />
-              <stop offset="100%" stopColor="#7DD3FC" stopOpacity="0.65" />
-            </linearGradient>
-            <linearGradient id="ind" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#A5B4FC" stopOpacity="0.55" />
-              <stop offset="100%" stopColor="#818CF8" stopOpacity="0.65" />
-            </linearGradient>
-            <linearGradient id="vio" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#C4B5FD" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#A78BFA" stopOpacity="0.6" />
-            </linearGradient>
-            <linearGradient id="pnk" x1="0" y1="0" x2="1" y2="0">
-              <stop offset="0%" stopColor="#FBCFE8" stopOpacity="0.55" />
-              <stop offset="100%" stopColor="#F9A8D4" stopOpacity="0.65" />
-            </linearGradient>
-          </defs>
+      {/* Main content */}
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-16 w-full">
+        <div className="grid lg:grid-cols-[1fr_1.1fr] gap-10 items-center">
 
-          {/* Sky-blue band — top */}
-          <path d="M-60,160 C80,80 220,200 380,130 C470,95 540,120 640,80 L640,200 C540,240 470,215 380,250 C220,320 80,200 -60,280 Z"
-            fill="url(#sky)" />
-
-          {/* Indigo band */}
-          <path d="M-60,300 C80,220 220,340 380,270 C470,235 540,260 640,220 L640,340 C540,380 470,355 380,390 C220,460 80,340 -60,420 Z"
-            fill="url(#ind)" />
-
-          {/* Violet band */}
-          <path d="M-60,440 C80,360 220,480 380,410 C470,375 540,400 640,360 L640,480 C540,520 470,495 380,530 C220,600 80,480 -60,560 Z"
-            fill="url(#vio)" />
-
-          {/* Pink band — bottom (fills to edge) */}
-          <path d="M-60,560 C80,480 220,600 380,530 C470,495 540,520 640,480 L640,800 L-60,800 Z"
-            fill="url(#pnk)" />
-        </svg>
-
-        {/* Left-edge white fade so waves don't bleed into text */}
-        <div className="absolute inset-y-0 left-0 w-28 bg-gradient-to-r from-white to-transparent" />
-      </div>
-
-      {/* Very light base tint behind text column */}
-      <div className="absolute inset-y-0 left-0 w-[50%] bg-white pointer-events-none" />
-
-      <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-
-          {/* Left — copy */}
+          {/* ── Left: copy ── */}
           <div>
-            <div className="flex flex-wrap gap-2 mb-8">
-              {serviceTags.map(({ label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  className="text-[11px] font-bold tracking-widest text-slate-500 hover:text-[#4F46E5] hover:border-[#4F46E5] border border-slate-300 rounded-full px-3 py-1 uppercase transition-colors"
-                >
-                  {label}
-                </a>
-              ))}
-            </div>
+            <p className="text-xs font-semibold tracking-[0.18em] text-slate-400 uppercase mb-7">
+              Ideas&nbsp;&nbsp;|&nbsp;&nbsp;Automation&nbsp;&nbsp;|&nbsp;&nbsp;AI&nbsp;&nbsp;|&nbsp;&nbsp;Digital Solutions
+            </p>
 
-            <h1 className="text-[clamp(2.4rem,4.5vw,4rem)] font-black leading-[1.06] tracking-tight text-[#0F172A] mb-6">
-              Technology that solves<br />
-              what's{" "}
-              <span className="text-[#4F46E5]">slowing you down.</span>
+            <h1 className="text-[clamp(2.4rem,4.5vw,4rem)] font-black leading-[1.07] tracking-tight text-[#0F172A] mb-5">
+              Technology that solves what's<br />
+              <span className="bg-gradient-to-r from-[#4F46E5] to-[#7C3AED] bg-clip-text text-transparent">
+                slowing you down.
+              </span>
             </h1>
-            <p className="text-lg text-slate-600 leading-relaxed max-w-md mb-10">
-              AI, automation and digital solutions — made simple.
+
+            <p className="text-lg text-slate-600 leading-relaxed mb-10">
+              AI, automation and digital solutions — made simple.<br />
               You tell us what's not working. We'll take care of the rest.
             </p>
+
             <div className="flex flex-wrap gap-4">
               <a
                 href="#contact"
@@ -106,10 +44,7 @@ export default function Hero() {
                 Tell us what's not working
                 <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
               </a>
-              <a
-                href="#what-we-do"
-                className="inline-flex items-center gap-2.5 px-5 py-4 text-slate-700 font-semibold hover:text-[#4F46E5] transition-colors"
-              >
+              <a href="#what-we-do" className="inline-flex items-center gap-3 px-4 py-4 text-slate-700 font-semibold hover:text-[#4F46E5] transition-colors">
                 <span className="w-8 h-8 rounded-full bg-white shadow border border-slate-100 flex items-center justify-center">
                   <Play size={10} fill="#4F46E5" className="ml-0.5" />
                 </span>
@@ -118,55 +53,79 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right — illustration */}
-          <div className="hidden lg:flex flex-col items-center">
-            {/* Problem cards */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-sm">
-              {problems.map(({ icon: Icon, label, iconBg }) => (
+          {/* ── Right: diagram ── */}
+          <div className="hidden lg:flex flex-col items-center gap-0">
+
+            {/* 4 problem cards — horizontal row */}
+            <div className="grid grid-cols-4 gap-3 w-full">
+              {problems.map(({ icon: Icon, label, iconColor, iconBg }) => (
                 <div
                   key={label}
-                  className="bg-white rounded-2xl border border-slate-100 shadow-md px-4 py-5 flex flex-col items-center gap-2.5 text-center"
+                  className="bg-white/80 backdrop-blur-sm rounded-2xl border border-white shadow-md p-4 flex flex-col items-center gap-3 text-center"
                 >
-                  <span className={`w-12 h-12 rounded-2xl flex items-center justify-center ${iconBg}`}>
-                    <Icon size={22} />
+                  <span className={`w-11 h-11 rounded-xl ${iconBg} flex items-center justify-center`}>
+                    <Icon size={22} className={iconColor} />
                   </span>
-                  <span className="text-sm font-bold text-slate-800 leading-tight">{label}</span>
+                  <span className="text-xs font-semibold text-slate-700 leading-tight">{label}</span>
                 </div>
               ))}
             </div>
 
-            {/* Converging arrows */}
-            <svg viewBox="0 0 320 72" className="w-72" fill="none">
-              <line x1="60"  y1="0" x2="160" y2="56" stroke="#F43F5E" strokeWidth="2" strokeDasharray="5 4" />
-              <line x1="120" y1="0" x2="160" y2="56" stroke="#F59E0B" strokeWidth="2" strokeDasharray="5 4" />
-              <line x1="200" y1="0" x2="160" y2="56" stroke="#0EA5E9" strokeWidth="2" strokeDasharray="5 4" />
-              <line x1="260" y1="0" x2="160" y2="56" stroke="#10B981" strokeWidth="2" strokeDasharray="5 4" />
-              <polygon points="154,56 166,56 160,70" fill="#4F46E5" />
+            {/* Curved SVG connecting lines */}
+            <svg viewBox="0 0 480 110" className="w-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                {problems.map(({ lineColor }, i) => (
+                  <marker key={i} id={`arr${i}`} markerWidth="7" markerHeight="7" refX="3.5" refY="3.5" orient="auto">
+                    <path d="M0,1 L3.5,6 L7,1" stroke={lineColor} strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
+                  </marker>
+                ))}
+              </defs>
+              {/* Curved paths: each card center x = 55, 175, 305, 425 → converge to 240, 100 */}
+              <path d="M55,0 C55,55 240,55 240,100"   stroke={problems[0].lineColor} strokeWidth="2" markerEnd="url(#arr0)" />
+              <path d="M175,0 C175,50 240,50 240,100"  stroke={problems[1].lineColor} strokeWidth="2" markerEnd="url(#arr1)" />
+              <path d="M305,0 C305,50 240,50 240,100"  stroke={problems[2].lineColor} strokeWidth="2" markerEnd="url(#arr2)" />
+              <path d="M425,0 C425,55 240,55 240,100"  stroke={problems[3].lineColor} strokeWidth="2" markerEnd="url(#arr3)" />
             </svg>
 
             {/* ANU-Q solution card */}
-            <div className="bg-white rounded-2xl border border-slate-100 shadow-xl px-10 py-8 flex flex-col items-center gap-4 w-full max-w-xs">
+            <div className="bg-white/90 backdrop-blur-sm rounded-2xl border border-white shadow-xl px-10 py-7 flex flex-col items-center gap-3 w-4/5">
               <Image
                 src="/logo-icon.webp"
                 alt="ANU-Q Technologies"
-                width={96}
-                height={96}
-                className="w-24 h-24 object-contain"
+                width={80}
+                height={80}
+                className="w-20 h-20 object-contain"
               />
               <div className="text-center">
-                <p className="font-black text-base tracking-widest text-[#0F172A] uppercase">ANU-Q Technologies</p>
-                <p className="text-slate-500 text-sm mt-1">A simpler, smarter way forward.</p>
+                <p className="font-black text-lg tracking-widest text-[#0F172A] uppercase leading-tight">ANU-Q</p>
+                <p className="text-xs font-semibold tracking-[0.3em] text-slate-400 uppercase mb-1">Technologies</p>
+                <p className="text-slate-500 text-sm">A simpler, smarter way forward.</p>
               </div>
             </div>
-          </div>
 
+          </div>
         </div>
       </div>
 
-      {/* Bottom wave transition */}
+      {/* ── Bottom wave decoration ── */}
       <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14 fill-[#EEF2FF]">
-          <path d="M0,30 C360,0 1080,60 1440,20 L1440,60 L0,60 Z" />
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none" className="w-full h-24" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="waveBlue" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#93C5FD" stopOpacity="0" />
+              <stop offset="40%" stopColor="#818CF8" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#6366F1" stopOpacity="0.7" />
+            </linearGradient>
+            <linearGradient id="wavePink" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stopColor="#F9A8D4" stopOpacity="0.6" />
+              <stop offset="60%" stopColor="#C084FC" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#818CF8" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          {/* Blue/indigo wave — right side */}
+          <path d="M600,80 C800,20 1100,100 1440,40 L1440,120 L600,120 Z" fill="url(#waveBlue)" />
+          {/* Pink/violet wave — left side */}
+          <path d="M0,90 C200,30 500,110 840,60 L840,120 L0,120 Z" fill="url(#wavePink)" />
         </svg>
       </div>
     </section>
