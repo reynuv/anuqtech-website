@@ -35,7 +35,7 @@ export default function WhatWeHelp() {
               Turn challenges into opportunities.
             </h2>
           </div>
-          <p className="text-slate-500 text-sm max-w-xs leading-relaxed sm:text-right">
+          <p className="text-slate-600 text-sm max-w-xs leading-relaxed sm:text-right">
             Practical technology solutions<br className="hidden sm:block" /> for real business needs.
           </p>
         </div>
@@ -52,7 +52,7 @@ export default function WhatWeHelp() {
                   <Icon size={22} />
                 </span>
                 <h3 className="font-bold text-[#0F172A] text-lg mb-2">{title}</h3>
-                <p className="text-slate-500 text-sm leading-relaxed mb-6">{desc}</p>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6">{desc}</p>
                 <a
                   href="#contact"
                   className="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-[#4F46E5] flex items-center justify-center transition-colors"

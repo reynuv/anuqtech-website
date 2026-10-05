@@ -42,7 +42,7 @@ export default function ContactCTA() {
               You don't need the tech answer.<br />
               <span className="text-indigo-400">Just the problem.</span>
             </h2>
-            <p className="text-slate-400 text-lg leading-relaxed">
+            <p className="text-slate-300 text-lg leading-relaxed">
               Tell us what's not working and we'll show you what's possible.
             </p>
           </div>

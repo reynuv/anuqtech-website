@@ -45,7 +45,7 @@ export default function HowItWorks() {
                   </div>
                   <div>
                     <h3 className="font-bold text-[#0F172A] text-lg mb-1.5">{title}</h3>
-                    <p className="text-slate-500 text-sm leading-relaxed max-w-[200px]">{desc}</p>
+                    <p className="text-slate-600 text-sm leading-relaxed max-w-[200px]">{desc}</p>
                   </div>
                 </div>
               </div>
