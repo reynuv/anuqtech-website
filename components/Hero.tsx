@@ -1,82 +1,103 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Play, FileText, Link2, Clock, Lightbulb } from "lucide-react";
 import Image from "next/image";
+
+const problems = [
+  { icon: FileText,  label: "Manual work",        color: "bg-rose-50 text-rose-500",   line: "#F43F5E" },
+  { icon: Link2,     label: "Disconnected tools",  color: "bg-amber-50 text-amber-500", line: "#F59E0B" },
+  { icon: Clock,     label: "Slow decisions",      color: "bg-sky-50 text-sky-500",     line: "#0EA5E9" },
+  { icon: Lightbulb, label: "New ideas",           color: "bg-emerald-50 text-emerald-500", line: "#10B981" },
+];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col justify-between bg-[#0F172A] overflow-hidden">
-      {/* Grid */}
-      <div
-        className="absolute inset-0 pointer-events-none"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(29,78,216,0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(29,78,216,0.08) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      />
-      {/* Glow — centered on logo */}
-      <div className="absolute top-24 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#1D4ED8]/15 blur-[140px] rounded-full pointer-events-none" />
-
-      <div className="relative flex-1 flex flex-col items-center justify-center text-center max-w-5xl mx-auto px-6 sm:px-10 lg:px-16 pt-24 pb-16">
-
-        {/* Logo — centrepiece identity */}
-        <div className="relative mb-8">
-          <div className="absolute inset-0 scale-150 bg-[#1D4ED8]/20 blur-[80px] rounded-full pointer-events-none" />
-          <Image
-            src="/logo-icon.webp"
-            alt="ANU-Q Technologies"
-            width={180}
-            height={180}
-            className="relative w-36 h-36 sm:w-44 sm:h-44 lg:w-52 lg:h-52 object-contain drop-shadow-[0_0_60px_rgba(96,165,250,0.5)]"
-            priority
-          />
-        </div>
-
-        <p className="text-white font-black text-3xl sm:text-4xl tracking-[0.2em] uppercase mb-1">ANU-Q</p>
-        <p className="text-zinc-500 text-xs tracking-[0.5em] uppercase mb-16">Technologies</p>
-
-        <h1 className="text-[clamp(2.2rem,6vw,5.5rem)] font-black leading-[0.95] tracking-tight text-white mb-6">
-          One team for the problems
-          <br />
-          <span className="text-[#60A5FA]">specialists split apart.</span>
-        </h1>
-
-        <p className="text-lg text-zinc-400 max-w-lg leading-relaxed mb-10">
-          Complex, fragmented problems. No gap between specialists. One team,
-          one solution, fewer handoffs.
-        </p>
-
-        <div className="flex flex-wrap justify-center gap-4">
-          <a
-            href="#contact"
-            className="group inline-flex items-center gap-3 px-8 py-4 bg-[#1D4ED8] text-white font-semibold rounded-xl hover:bg-[#1E40AF] transition-all text-lg shadow-lg shadow-[#1D4ED8]/30"
-          >
-            Bring us your problem
-            <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-          </a>
-          <a
-            href="#manifesto"
-            className="inline-flex items-center gap-3 px-8 py-4 border border-zinc-700 text-zinc-300 font-semibold rounded-xl hover:border-zinc-400 hover:text-white transition-all text-lg"
-          >
-            See how we think
-          </a>
-        </div>
+    <section className="relative min-h-screen flex items-center bg-white overflow-hidden pt-16">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute bottom-0 left-0 right-0 h-64 bg-gradient-to-t from-[#F0F4FF] to-transparent" />
+        <div className="absolute top-1/3 right-0 w-[600px] h-[600px] rounded-full bg-[#EEF2FF] blur-3xl opacity-50" />
       </div>
 
-      {/* Ticker */}
-      <div className="relative border-t border-white/5 py-5 overflow-hidden">
-        <div className="ticker-track flex gap-0 whitespace-nowrap w-max">
-          {[
-            "AI Systems", "Process Automation", "Product Builds", "Workflow Design",
-            "AnuQ Vastu", "SkinSense", "Full-Stack Development", "AI Strategy",
-            "AI Systems", "Process Automation", "Product Builds", "Workflow Design",
-            "AnuQ Vastu", "SkinSense", "Full-Stack Development", "AI Strategy",
-          ].map((item, i) => (
-            <span key={i} className="inline-flex items-center gap-4 text-sm font-mono text-zinc-600 px-6">
-              {item}<span className="text-[#3B82F6]">·</span>
-            </span>
-          ))}
+      <div className="relative max-w-7xl mx-auto px-6 sm:px-10 lg:px-16 py-20 w-full">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+
+          {/* Left — copy */}
+          <div>
+            <p className="text-xs font-semibold tracking-[0.2em] text-slate-400 uppercase mb-6">
+              Ideas&nbsp;|&nbsp;Automation&nbsp;|&nbsp;AI&nbsp;|&nbsp;Digital Solutions
+            </p>
+            <h1 className="text-[clamp(2.4rem,5vw,4rem)] font-black leading-[1.08] tracking-tight text-[#0F172A] mb-6">
+              Technology that solves<br />
+              what's{" "}
+              <span className="text-[#4F46E5]">slowing you down.</span>
+            </h1>
+            <p className="text-lg text-slate-500 leading-relaxed max-w-lg mb-10">
+              AI, automation and digital solutions — made simple.<br />
+              You tell us what's not working. We'll take care of the rest.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="group inline-flex items-center gap-2 px-6 py-3.5 rounded-xl bg-[#4F46E5] text-white font-semibold hover:bg-[#3730A3] transition-colors shadow-lg shadow-indigo-200"
+              >
+                Tell us what's not working
+                <ArrowRight size={16} className="group-hover:translate-x-0.5 transition-transform" />
+              </a>
+              <a
+                href="#what-we-do"
+                className="inline-flex items-center gap-2.5 px-6 py-3.5 text-slate-600 font-semibold hover:text-[#4F46E5] transition-colors"
+              >
+                <span className="w-7 h-7 rounded-full bg-slate-100 flex items-center justify-center">
+                  <Play size={11} fill="currentColor" />
+                </span>
+                See what's possible
+              </a>
+            </div>
+          </div>
+
+          {/* Right — illustration */}
+          <div className="hidden lg:flex flex-col items-center gap-0">
+            {/* Problem cards */}
+            <div className="grid grid-cols-2 gap-3 w-full max-w-sm">
+              {problems.map(({ icon: Icon, label, color }) => (
+                <div
+                  key={label}
+                  className="bg-white rounded-2xl border border-slate-100 shadow-sm px-4 py-3.5 flex items-center gap-3"
+                >
+                  <span className={`w-9 h-9 rounded-xl flex items-center justify-center shrink-0 ${color}`}>
+                    <Icon size={17} />
+                  </span>
+                  <span className="text-sm font-semibold text-slate-700">{label}</span>
+                </div>
+              ))}
+            </div>
+
+            {/* Converging arrows */}
+            <svg viewBox="0 0 320 64" className="w-72 -my-1" fill="none">
+              <line x1="60"  y1="0" x2="160" y2="52" stroke="#F43F5E" strokeWidth="1.5" strokeDasharray="4 3" />
+              <line x1="120" y1="0" x2="160" y2="52" stroke="#F59E0B" strokeWidth="1.5" strokeDasharray="4 3" />
+              <line x1="200" y1="0" x2="160" y2="52" stroke="#0EA5E9" strokeWidth="1.5" strokeDasharray="4 3" />
+              <line x1="260" y1="0" x2="160" y2="52" stroke="#10B981" strokeWidth="1.5" strokeDasharray="4 3" />
+              <polygon points="154,52 166,52 160,64" fill="#4F46E5" />
+            </svg>
+
+            {/* ANU-Q solution card */}
+            <div className="bg-white rounded-2xl border border-indigo-100 shadow-xl px-8 py-6 flex flex-col items-center gap-3 w-full max-w-xs">
+              <Image
+                src="/logo-icon.webp"
+                alt="ANU-Q Technologies"
+                width={56}
+                height={56}
+                className="w-14 h-14 object-contain"
+              />
+              <div className="text-center">
+                <p className="font-black text-sm tracking-widest text-[#0F172A] uppercase">ANU-Q Technologies</p>
+                <p className="text-slate-400 text-xs mt-1">A simpler, smarter way forward.</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
