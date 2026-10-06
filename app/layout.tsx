@@ -5,10 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "ANU-Q Technologies — AI Automation & Innovation",
+  title: "ANU-Q Technologies — Practical AI, Automation & Digital Solutions",
   description:
-    "ANU-Q Technologies builds intelligent AI-powered products and automation solutions for modern businesses. Explore AnuQ Vastu, SkinSense, and custom AI development services.",
-  keywords: "AI automation, artificial intelligence, AnuQ Vastu, SkinSense, India, OPC, technology, ANU-Q",
+    "ANU-Q Technologies turns manual work, disconnected tools and new ideas into practical AI, automation and digital solutions.",
+  keywords: "AI automation, artificial intelligence, digital solutions, India, OPC, technology, ANU-Q",
   openGraph: {
     title: "ANU-Q Technologies — AI Automation & Innovation",
     description: "Building intelligent AI products and automation for the modern world.",
@@ -28,8 +28,8 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className="h-full antialiased scroll-smooth">
-      <body className={`${inter.className} min-h-full flex flex-col`}>
+    <html lang="en">
+      <body className={inter.className}>
         {children}
       </body>
     </html>

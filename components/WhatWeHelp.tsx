@@ -1,101 +1,62 @@
-import { Clock, Share2, BarChart3, ArrowRight } from "lucide-react";
+interface WhatWeHelpProps {
+  onContact: () => void;
+}
 
-const services = [
-  {
-    icon: Clock,
-    iconBg: "bg-sky-500",
-    gradient: "from-sky-500/10 via-sky-50/50 to-white",
-    border: "border-sky-100",
-    accent: "bg-sky-500",
-    title: "Save time",
-    desc: "Automate the manual work so your team can focus on what matters.",
-    stat: "80%",
-    statLabel: "less manual work",
-  },
-  {
-    icon: Share2,
-    iconBg: "bg-teal-500",
-    gradient: "from-teal-500/10 via-teal-50/50 to-white",
-    border: "border-teal-100",
-    accent: "bg-teal-500",
-    title: "Connect systems",
-    desc: "Bring your data, tools and teams together into one coherent workflow.",
-    stat: "1",
-    statLabel: "source of truth",
-  },
-  {
-    icon: BarChart3,
-    iconBg: "bg-violet-500",
-    gradient: "from-violet-500/10 via-violet-50/50 to-white",
-    border: "border-violet-100",
-    accent: "bg-violet-500",
-    title: "Build smarter",
-    desc: "Turn your ideas into simple, scalable solutions built for growth.",
-    stat: "3×",
-    statLabel: "faster to market",
-  },
-];
+export default function WhatWeHelp({ onContact }: WhatWeHelpProps) {
+  function handleContactClick(e: React.MouseEvent) {
+    e.preventDefault();
+    onContact();
+  }
 
-export default function WhatWeHelp() {
   return (
-    <section id="what-we-do" className="relative bg-[#F0F4FF] py-24">
-      {/* Top wave (matches hero bottom) */}
-      <div className="absolute top-0 left-0 right-0 pointer-events-none -translate-y-px">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14 fill-[#F0F4FF]">
-          <path d="M0,40 C360,0 1080,80 1440,20 L1440,0 L0,0 Z" />
-        </svg>
-      </div>
-
-      <div className="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6 mb-14">
+    <section className="section section-cards" id="what-we-do">
+      <div className="container">
+        <div className="section-heading split-heading reveal">
           <div>
-            <p className="text-xs font-bold tracking-[0.2em] text-[#4F46E5] uppercase mb-3">What We Help With</p>
-            <h2 className="text-3xl sm:text-4xl font-black text-[#0F172A] leading-tight max-w-md">
-              Turn challenges into opportunities.
-            </h2>
+            <p className="eyebrow">WHAT WE HELP WITH</p>
+            <h2>Turn challenges into opportunities.</h2>
           </div>
-          <p className="text-slate-600 text-sm max-w-xs leading-relaxed sm:text-right">
-            Practical technology solutions<br className="hidden sm:block" /> for real business needs.
-          </p>
+          <p>Practical technology solutions<br />for real business needs.</p>
         </div>
 
-        <div className="grid sm:grid-cols-3 gap-5">
-          {services.map(({ icon: Icon, iconBg, gradient, border, accent, title, desc, stat, statLabel }) => (
-            <div
-              key={title}
-              className={`group bg-gradient-to-b ${gradient} rounded-2xl border ${border} shadow-sm overflow-hidden hover:shadow-lg hover:-translate-y-1 transition-all duration-200`}
-            >
-              <div className={`h-1 w-full ${accent}`} />
-              <div className="p-7">
-                <span className={`w-12 h-12 rounded-2xl ${iconBg} text-white flex items-center justify-center mb-5 shadow-md`}>
-                  <Icon size={22} />
-                </span>
-                <h3 className="font-bold text-[#0F172A] text-lg mb-2">{title}</h3>
-                <p className="text-slate-600 text-sm leading-relaxed mb-6">{desc}</p>
+        <div className="benefit-grid">
+          <article className="benefit-card reveal">
+            <span className="benefit-icon blue" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="8"/>
+                <path d="M12 7v5l3 2"/>
+              </svg>
+            </span>
+            <h3>Save time</h3>
+            <p>Automate the manual work so your team can focus on what matters.</p>
+            <a className="circle-arrow" href="#contact" onClick={handleContactClick} aria-label="Talk to us about saving time">→</a>
+          </article>
 
-                {/* Stat callout */}
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className="text-3xl font-black text-[#4F46E5]">{stat}</span>
-                  <span className="text-xs text-slate-500 font-medium">{statLabel}</span>
-                </div>
+          <article className="benefit-card reveal">
+            <span className="benefit-icon green" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <circle cx="6" cy="6" r="2"/>
+                <circle cx="18" cy="6" r="2"/>
+                <circle cx="12" cy="18" r="2"/>
+                <path d="M8 7l8 0M7 8l4 8M17 8l-4 8"/>
+              </svg>
+            </span>
+            <h3>Connect systems</h3>
+            <p>Bring your data, tools and teams together.</p>
+            <a className="circle-arrow" href="#contact" onClick={handleContactClick} aria-label="Talk to us about connecting systems">→</a>
+          </article>
 
-                <a
-                  href="#contact"
-                  className={`inline-flex items-center gap-1.5 text-sm font-semibold text-[#4F46E5] hover:gap-2.5 transition-all`}
-                >
-                  Learn more <ArrowRight size={14} />
-                </a>
-              </div>
-            </div>
-          ))}
+          <article className="benefit-card reveal">
+            <span className="benefit-icon purple" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M5 19V11h3v8zM10.5 19V7h3v12zM16 19V4h3v15z"/>
+              </svg>
+            </span>
+            <h3>Build smarter</h3>
+            <p>Turn your ideas into simple, scalable solutions.</p>
+            <a className="circle-arrow" href="#contact" onClick={handleContactClick} aria-label="Talk to us about building a solution">→</a>
+          </article>
         </div>
-      </div>
-
-      {/* Wave transition down */}
-      <div className="absolute bottom-0 left-0 right-0 pointer-events-none">
-        <svg viewBox="0 0 1440 60" preserveAspectRatio="none" className="w-full h-14 fill-white">
-          <path d="M0,20 C480,70 960,0 1440,40 L1440,60 L0,60 Z" />
-        </svg>
       </div>
     </section>
   );
