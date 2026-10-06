@@ -4,13 +4,14 @@ import { useState } from "react";
 import Image from "next/image";
 
 interface NavbarProps {
-  onContact: () => void;
+  onContact?: () => void;
 }
 
 export default function Navbar({ onContact }: NavbarProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   function handleContactClick(e: React.MouseEvent) {
+    if (!onContact) return;
     e.preventDefault();
     setMenuOpen(false);
     onContact();
